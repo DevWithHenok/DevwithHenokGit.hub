@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish Your Website - Dev with Henok</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(145deg, #161b22, #1a1f29);
+            border-radius: 16px;
+            margin: 20px 0;
+            border: 1px solid rgba(0, 255, 157, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00ffff, #00ff9d, #ff00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin: 1.5rem 0;
+            color: #00ff9d;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 1.2rem 0;
+            color: #00ffff;
+        }
+        
+        p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+            color: #b0b0b0;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: #ccc;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(145deg, #161b22, #1a1f29);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 255, 157, 0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 255, 157, 0.2);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #00ff9d, #00ffff);
+            color: #0d1117;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .code-block {
+            background: #0d1117;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            border: 1px solid #21262d;
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+            color: #00ff9d;
+        }
+        
+        .platform-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .platform {
+            text-align: center;
+            width: 130px;
+        }
+        
+        .platform i {
+            font-size: 3rem;
+            color: #00ff9d;
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #00ff9d, #00ffff);
+            color: #0d1117;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 255, 157, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #161b22, #1a1f29);
+            color: #00ff9d;
+            border: 1px solid #00ff9d;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .highlight {
+            color: #00ff9d;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: #06090f;
+            border-radius: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Publish Your Website</h1>
+            <p class="tagline">Turn your HTML/CSS website into a live link you can share with the world!</p>
+            <p>Follow these steps to get your Dev with Henok website online</p>
+        </header>
+        
+        <div class="card-container">
+            <div class="card">
+                <h3><span class="step-number">1</span>Save Your Code</h3>
+                <p>Save your HTML file as <span class="highlight">index.html</span> on your computer.</p>
+                <div class="code-block">
+                    <code>Right-click → Save As → index.html</code>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="step-number">2</span>Choose a Hosting Platform</h3>
+                <p>Select a platform to host your website for free:</p>
+                <ul>
+                    <li>GitHub Pages (developer-friendly)</li>
+                    <li>Netlify (easy drag-and-drop)</li>
+                    <li>Vercel (excellent for web apps)</li>
+                    <li>GitLab Pages (alternative to GitHub)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2 class="center">Step-by-Step Guide for GitHub Pages</h2>
+        
+        <div class="card-container">
+            <div class="card">
+                <h3><span class="step-number">1</span>Create GitHub Account</h3>
+                <p>Go to <a href="https://github.com/" target="_blank" class="highlight">github.com</a> and create a free account if you don't have one.</p>
+            </div>
+            
+            <div class="card">
+                <h3><span class="step-number">2</span>Create New Repository</h3>
+                <p>Click on "+" → "New repository"</p>
+                <p>Name it <span class="highlight">username.github.io</span> (replace "username" with your GitHub username)</p>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card">
+                <h3><span class="step-number">3</span>Upload Your Files</h3>
+                <p>Drag and drop your <span class="highlight">index.html</span> file into the repository.</p>
+                <p>You can also upload other files (CSS, images) this way.</p>
+            </div>
+            
+            <div class="card">
+                <h3><span class="step-number">4</span>Visit Your Website</h3>
+                <p>Go to <span class="highlight">https://username.github.io</span></p>
+                <p>Your website should now be live! It may take a few minutes to appear.</p>
+            </div>
+        </div>
+        
+        <div class="center">
+            <h2>Your Website Link Will Be:</h2>
+            <p class="highlight">https://yourusername.github.io</p>
+            
+            <h2>Quick Publish Options</h2>
+            <p>For even faster publishing, try these platforms:</p>
+            
+            <div class="platform-logos">
+                <div class="platform">
+                    <i class="fab fa-netlify"></i>
+                    <p>Netlify</p>
+                </div>
+                <div class="platform">
+                    <i class="fab fa-vercel"></i>
+                    <p>Vercel</p>
+                </div>
+                <div class="platform">
+                    <i class="fab fa-github"></i>
+                    <p>GitHub Pages</p>
+                </div>
+                <div class="platform">
+                    <i class="fab fa-gitlab"></i>
+                    <p>GitLab Pages</p>
+                </div>
+            </div>
+            
+            <a href="#" class="btn">Download Your Website Code</a>
+            <a href="https://github.com/" target="_blank" class="btn btn-secondary">Go to GitHub</a>
+        </div>
+        
+        <div class="card">
+            <h2>Tips for Success</h2>
+            <p>• Double-check all links work correctly</p>
+            <p>• Test your website on mobile devices</p>
+            <p>• Share your link on social media</p>
+            <p>• Update content regularly to keep visitors engaged</p>
+            <p>• Consider buying a custom domain (e.g., devwithhenok.com) for a more professional look</p>
+        </div>
+        
+        <footer>
+            <p>© 2025 Dev with Henok. All Rights Reserved.</p>
+            <p>Need help? Contact me on YouTube: <span class="highlight">Dev with Henok</span></p>
+        </footer>
+    </div>
+
+    <script>
+        // Create download functionality for the code
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('In a real implementation, this would download your HTML file. For now, please right-click and save the HTML code from the previous implementation.');
+        });
+    </script>
+</body>
+</html>
